@@ -1,0 +1,30 @@
+package cn.iteast_01;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.Scanner;
+public class HelloWorld {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println("Helloworld");
+		
+		
+        Scanner sc = new Scanner(System.in);
+        while(sc.hasNext()){
+            String n=sc.nextLine();
+            String line=sc.nextLine();
+            String[] nums=line.split(" ");
+            Arrays.sort(nums,Collections.reverseOrder());
+            StringBuilder sb = new StringBuilder();
+            for(int i =0;i<nums.length;i++){
+                sb.append(nums[i]);
+            }
+            System.out.println(sb.toString());
+        }	                    	
+	}
+
+}

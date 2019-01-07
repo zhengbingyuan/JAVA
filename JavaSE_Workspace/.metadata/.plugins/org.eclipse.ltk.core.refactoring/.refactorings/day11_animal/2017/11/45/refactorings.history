@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;cm.liuyi&apos; to &apos;cm.liuyi_01&apos;&#x0D;&#x0A;- Original project: &apos;day11_animal&apos;&#x0D;&#x0A;- Original element: &apos;day11_animal/src/cm.liuyi&apos;&#x0D;&#x0A;- Renamed element: &apos;day11_animal/src/cm.liuyi_01&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;cm.liuyi&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src&lt;cm.liuyi" name="cm.liuyi_01" qualified="false" references="true" stamp="1510110038386" textual="false" version="1.0"/>
+</session>

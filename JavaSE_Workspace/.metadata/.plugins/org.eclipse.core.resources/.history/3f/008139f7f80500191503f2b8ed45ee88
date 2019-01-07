@@ -1,0 +1,74 @@
+package HashCode;
+
+import java.util.HashMap;
+import java.util.HashSet;
+
+class Student{
+	public int grade;
+	public int cls;
+	public String firstName;
+	public String lastName;
+	
+	Student(int grade, int cls,String firstName,String lastName){
+		this.grade = grade;
+		this.cls = cls;
+		this.firstName = firstName;
+		this.lastName = lastName;
+	}
+	
+	@Override
+	public int hashCode() {
+		int B = 31;
+		int hash = 0;
+		hash = hash*B + grade;
+		hash = hash*B + cls;
+		hash = hash*B + firstName.toLowerCase().hashCode();
+		hash = hash*B + lastName.toLowerCase().hashCode();
+		return hash;
+	}
+	
+	@Override
+	public boolean equals(Object o) {
+		if(this == o)
+			return true;
+		if(o==null)
+			return false;
+		if(this.getClass()!=o.getClass())
+			return false;
+		Student another = (Student)o;
+		return this.grade== another.grade &&
+				this.cls == another.cls &&
+				this.firstName.toLowerCase().equals(another.firstName.toLowerCase()) &&
+				this.lastName.toLowerCase().equals(another.lastName.toLowerCase());
+	}
+	
+}
+
+
+public class HashCode {
+	public static void main(String[] args) {
+		int a = 42;
+		System.out.println(((Integer)a).hashCode());
+		
+		int b = -42;
+		System.out.println(((Integer)b).hashCode());
+		
+		double c = 3.1415926;
+		System.out.println(((Double)c).hashCode());
+		
+		String d = "imooc";
+		System.out.println(d.hashCode());
+		
+		Student s = new Student(3, 2, "bobo", "lastName");
+		System.out.println(s.hashCode());
+		
+		HashSet<Student> set = new HashSet<>();
+		set.add(s);
+		
+		HashMap<Student, Integer> map = new HashMap<>();
+		map.put(s,100);
+		
+		Student s2 = new Student(3, 2, "BOBO", "lastName");
+		System.out.println(s2.hashCode());
+	}
+}

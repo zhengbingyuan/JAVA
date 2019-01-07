@@ -1,0 +1,18 @@
+/*
+ * 		不同进制的数据表现
+ * 			二进制：由0,1组成。以0b开头。
+ * 			八进制：由0,1，...7组成。以0开头。
+ * 			十进制：由0,1，...9组成。默认整数是十进制。
+ * 			十六进制：由0,1，...9，a,b,c,d,e,f(大小写均可)组成。以0x开头。
+ */
+package cn.Day02;
+
+public class JinZhiDemo {
+	public static void main(String[] args){
+		System.out.println(100);//十进制
+		
+		System.out.println(100);//二进制好像只能在1.7版本中运行
+		System.out.println(0100);//八进制
+		System.out.println(0x100);//十六进制
+	}
+}

@@ -1,0 +1,15 @@
+package cn.iteast_01;
+
+public class HelloWorld {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println("Helloworld");
+		System.out.print("Ö£±ùÔ­");
+		System.out.println("ÎÒÊÇ");
+	}
+
+}
